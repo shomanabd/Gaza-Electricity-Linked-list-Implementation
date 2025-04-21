@@ -1,4 +1,4 @@
-# COMP242 Project I - Gaza Electricity Data Management System
+# Data Structure Project I - Gaza Electricity Data Management System
 
 This application implements an electricity data management system for the Gaza Strip using a hierarchical sorted linked list data structure. It features a graphical user interface (GUI) built with JavaFX for managing records, viewing statistics, and saving updates.
 
