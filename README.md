@@ -1,62 +1,84 @@
-COMP242 Project I - Gaza Electricity Data Management System
-Project Overview
-This application implements an Electricity data management system for the Gaza Strip using combined sorted linked lists. The system provides a GUI interface built with JavaFX to manage electricity data records, generate statistics, and save updates.
-Features
-Data Management
-* **Load Data**: Load electricity records from CSV files using a file chooser
-* **Insert Records**: Add new electricity records with date selection via DatePicker
-* **Update Records**: Modify existing electricity records
-* **Delete Records**: Remove electricity records with confirmation dialog
-* **Search Records**: Find specific records by date using a calendar interface
-Statistics
-The application provides comprehensive statistics with the following options:
-* **Day Statistics**: View statistics for a specific day across all months and years
-* **Month Statistics**: View statistics for a specific month across all days and years
-* **Year Statistics**: View statistics for a specific year across all days and months
-* **Total Statistics**: Calculate and display sum, average, minimum, and maximum values for all metrics:
-   * Israeli Lines (MWs)
-   * Gaza Power Plant (MWs)
-   * Egyptian Lines (MWs)
-   * Total Daily Supply (MWs)
-   * Overall Demand (MWs)
-   * Power Cuts (hours/day)
-   * Temperature
-Save Functionality
-* Save updated data back to the original file
-* Save data to a new CSV file via file chooser
-Data Structure
-The project implements a combined sorted linked list with three levels:
-1. Year list - organized by year
-2. Month list - organized by month within each year
-3. Day list - organized by day within each month
-4. ElectricityRecord - the data stored for each specific date
-This structure allows for efficient insertion, deletion, and lookup of records by date.
-Data Format
-Each electricity record includes:
-* Date (YYYY-MM-DD format)
-* Israeli Lines (MWs)
-* Gaza Power Plant (MWs)
-* Egyptian Lines (MWs)
-* Total Daily Supply (MWs)
-* Overall Demand (MWs)
-* Power Cuts (hours/day)
-* Temperature
-Implementation Details
-* Built using JavaFX for the graphical user interface
-* Pure code implementation (no Scene Builder used)
-* Menu-based navigation with the following sections:
-   * Management menu (Insert, Update, Delete, Search)
-   * Statistics menu (Day, Month, Year, Total)
-   * File menu (Open, Print)
-   * Save menu (Save, Save new file)
-* Uses DatePicker for date selection
-* All data operations use the linked list data structure (no arrays or ArrayList)
-How to Run
-1. Compile the Java source files
-2. Run the `HelloApplication` main class
-3. Use the File menu to open the electricity data CSV file
-4. Navigate through the interface menus to manage data and view statistics
-Background
-This project utilizes real-world data from the Gaza Strip, which has suffered from chronic electricity deficits for over a decade. The data source is the Gaza Electricity Distribution Company (GEDCO), which provides this information daily to the United Nations Office for the Coordination of Humanitarian Affairs (OCHA).
-References
-* Background information: https://www.ochaopt.org/page/gaza-strip-electricity-supply . read the file and update the readme
+# COMP242 Project I - Gaza Electricity Data Management System
+
+This application implements an electricity data management system for the Gaza Strip using a hierarchical sorted linked list data structure. It features a graphical user interface (GUI) built with JavaFX for managing records, viewing statistics, and saving updates.
+
+---
+
+## 🔧 Features
+
+### 📂 Data Management
+- **Load Data**: Import electricity records from CSV files using a file chooser.
+- **Insert Records**: Add new entries with date selection via a `DatePicker`.
+- **Update Records**: Modify existing records.
+- **Delete Records**: Remove entries with confirmation dialog.
+- **Search Records**: Locate specific records by date using an intuitive calendar interface.
+
+### 📊 Statistics
+View detailed analytics based on time ranges:
+- **Daily Statistics**: Compare data for a specific day across all months and years.
+- **Monthly Statistics**: View stats for a specific month across all years.
+- **Yearly Statistics**: Explore data trends for a specific year.
+- **Total Statistics**: Displays sum, average, minimum, and maximum values for:
+  - Israeli Lines (MWs)
+  - Gaza Power Plant (MWs)
+  - Egyptian Lines (MWs)
+  - Total Daily Supply (MWs)
+  - Overall Demand (MWs)
+  - Power Cuts (hours/day)
+  - Temperature
+
+### 💾 Save Functionality
+- Save updates to the original file.
+- Save as a new CSV file using the file chooser.
+
+---
+
+## 🧱 Data Structure
+
+Implements a three-tier **combined sorted linked list**:
+1. **Year Node**: Top-level list sorted by year.
+2. **Month Node**: Nested under each year, sorted by month.
+3. **Day Node**: Nested under each month, sorted by day.
+4. **ElectricityRecord**: Stores actual data for each day.
+
+Efficient for insertion, deletion, and date-based lookup.
+
+---
+
+## 🧾 Data Format
+Each record contains:
+- Date (YYYY-MM-DD)
+- Israeli Lines (MWs)
+- Gaza Power Plant (MWs)
+- Egyptian Lines (MWs)
+- Total Daily Supply (MWs)
+- Overall Demand (MWs)
+- Power Cuts (hours/day)
+- Temperature (°C)
+
+---
+
+## 🛠️ Implementation Details
+- Built entirely in **JavaFX** (without Scene Builder)
+- Menu-driven GUI with sections for:
+  - Management (Insert, Update, Delete, Search)
+  - Statistics (Day, Month, Year, Total)
+  - File operations (Open, Print, Save)
+- Date selection using JavaFX `DatePicker`
+- All operations use a custom linked list (no arrays or ArrayLists used)
+
+---
+
+## ▶️ How to Run
+1. Compile all `.java` files.
+2. Run the `HelloApplication` main class.
+3. Use the **File menu** to load electricity data from a CSV file.
+4. Navigate menus to manage data and generate statistics.
+
+---
+
+## 🌍 Background
+This project uses real-world data from the Gaza Strip, which has long faced electricity shortages. Data is sourced from the **Gaza Electricity Distribution Company (GEDCO)** and reported to the **United Nations Office for the Coordination of Humanitarian Affairs (OCHA)**.
+
+### Reference
+- [Gaza Strip Electricity Supply - OCHA](https://www.ochaopt.org/page/gaza-strip-electricity-supply)
